@@ -49,4 +49,10 @@ public class AccountController {
         return accountService.withDrawAmount(accountNumber, amount);
     }
 
+    @DeleteMapping("/delete/{accountNumber}")
+    public ResponseEntity<String>  deleteAccount(@PathVariable Long accountNumber){
+        accountService.deleteAccount(accountNumber);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Account closed");
+    }
+
 }

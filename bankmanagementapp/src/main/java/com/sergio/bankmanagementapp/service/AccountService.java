@@ -11,6 +11,6 @@ public interface AccountService {
     public List<Account> getAllAccountDetails();
     public Account depositAmount(Long accountNumber, Double amount);
     public Account withDrawAmount(Long accountNumber, Double amount);
-    public void closeAccount(Long accountNumber);
+    public void deleteAccount(Long accountNumber);
 
 }

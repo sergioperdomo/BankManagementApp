@@ -65,9 +65,9 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public void closeAccount(Long accountNumber) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'closeAccount'");
+    public void deleteAccount(Long accountNumber) {
+        getAccountDetailsByAccountNumber(accountNumber);
+        accountRepository.deleteById(accountNumber);
     }
 
 }
